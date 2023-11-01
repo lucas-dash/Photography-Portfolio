@@ -1,11 +1,13 @@
 import Hero from '@/components/Hero';
-import Navbar from '@/components/Navbar';
+import Showcase from '@/components/Showcase';
+import Main from '@/components/Main';
 
 export default function Home() {
   return (
-    <main className="">
-      {/* <Navbar /> */}
+    <main className="bg-secondary">
       <Hero />
+      <Showcase />
+      <Main />
     </main>
   );
 }
