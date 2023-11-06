@@ -4,10 +4,12 @@ import Main from '@/components/Main';
 
 export default function Home() {
   return (
-    <main className="bg-secondary">
+    <>
       <Hero />
-      <Showcase />
-      <Main />
-    </main>
+      <main className="bg-secondary">
+        <Showcase />
+        <Main />
+      </main>
+    </>
   );
 }

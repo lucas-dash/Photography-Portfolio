@@ -11,7 +11,7 @@ export default function Hero() {
   };
 
   return (
-    <header className="bg-primary min-h-screen h-full flex flex-col justify-between pb-10">
+    <header className="bg-primary min-h-screen h-full flex flex-col justify-between pb-10 2xl:container">
       <Navbar />
 
       <div className="h-full grid grid-rows-[150px_1fr] md:grid-cols-2 md:grid-rows-1 py-5 px-0 sm:px-5 lg:px-10 text-center md:text-left ">

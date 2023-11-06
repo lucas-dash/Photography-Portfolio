@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${workSans.className} bg-secondary text-text-dark`}>
+      <body className={`${workSans.className} bg-primary text-text-dark`}>
         {children}
       </body>
     </html>
