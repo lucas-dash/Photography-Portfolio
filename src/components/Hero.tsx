@@ -26,7 +26,7 @@ export default function Hero() {
             className="bg-text-light rounded-md p-3 pb-5 w-max h-max shadow-[0_4px_29px_0] shadow-black/25 z-20"
           >
             <Image
-              src={'/photos/kids/2-1683468197705.jpg'}
+              src={'/photos/kids/2.jpg'}
               alt="boy kid photo"
               width={168}
               height={227}
@@ -39,7 +39,7 @@ export default function Hero() {
             className="bg-text-light rounded-md p-3 pb-5 w-max h-max shadow-[0_4px_29px_0] shadow-black/25 z-10"
           >
             <Image
-              src={'/photos/materniny/2-1652277556499.jpg'}
+              src={'/photos/materniny/2.jpg'}
               alt="newborn photo"
               width={168}
               height={221}

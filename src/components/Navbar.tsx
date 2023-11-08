@@ -26,7 +26,7 @@ export default function Navbar() {
 
         <ul className="hidden sm:flex gap-6 font-medium">
           <li>
-            <Link href={''}>About</Link>
+            <Link href={'/#about'}>About</Link>
           </li>
           <li>
             <Link href={''}>Gallery</Link>
