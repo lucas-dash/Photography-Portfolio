@@ -3,7 +3,6 @@
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog';
@@ -12,29 +11,25 @@ import { ReactNode } from 'react';
 import { galleryImages } from '@/lib/gallery';
 import Image from 'next/image';
 
-export default function Modal() {
-  const router = useRouter();
-  const searchParams = useSearchParams();
-  const galleryNumber = searchParams.get('gallery');
-
+export default function Modal({ images }: { images: string[] }) {
   // todo change images size, compres them
 
   return (
-    <Dialog defaultOpen onOpenChange={() => router.back()}>
+    <Dialog>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>{galleryImages[Number(galleryNumber)].name}</DialogTitle>
+          <DialogTitle>{images}</DialogTitle>
         </DialogHeader>
-        <div className="columns-2 mx-auto sm:columns-2 space-y-3">
+        {/* <div className="columns-2 mx-auto sm:columns-2 space-y-1 sm:space-y-3">
           {galleryImages[Number(galleryNumber)].images.map((src, index) => (
             <div
               key={index}
-              className="object-cover rounded-lg overflow-hidden w-full h-full "
+              className="object-cover rounded-lg overflow-hidden w-full h-full cursor-pointer"
             >
-              <Image src={src} alt="images" width={150} height={150} />
+              <Image src={src} alt="images" width={190} height={190} />
             </div>
           ))}
-        </div>
+        </div> */}
       </DialogContent>
     </Dialog>
   );

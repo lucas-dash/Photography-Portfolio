@@ -1,34 +1,24 @@
 'use client';
 
 import { useAnimate, motion, stagger } from 'framer-motion';
-import Link from 'next/link';
-import { useState } from 'react';
-
-const stack = [
-  { name: 'Family' },
-  { name: 'Kids' },
-  { name: 'New Born' },
-  { name: 'Moments' },
-];
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog';
+import Modal from './Modal';
+import { galleryImages } from '@/lib/gallery';
 
 export default function Portfolio() {
   // todo stagger h4
 
-  const [showUp, setSetshowUp] = useState(false);
-  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+  const [showModal, setShowModal] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
-  const handleCardClick = (index: number) => {
-    setExpandedIndex(index === expandedIndex ? -1 : index);
-  };
-
-  const cardVariants = {
-    expanded: {
-      width: '100%',
-    },
-    collapsed: {
-      width: 'auto',
-    },
-  };
+  useEffect(() => {}, []);
 
   return (
     <section className="p-2.5">
@@ -36,22 +26,19 @@ export default function Portfolio() {
         Portfolio
       </h3>
 
-      <section
+      <div
         className={`grid grid-cols-1 sm:grid-cols-2 gap-2.5 bg-lightGray rounded-[20px] p-2.5 mb-10 max-w-[1100px] mx-auto text-text-light min-h-[300px] relative`}
       >
-        {stack.map((card, index) => {
-          return (
-            <Link href={`/?gallery=${index}`} key={index} scroll={false}>
+        <Dialog>
+          {galleryImages.map((card, index) => {
+            return (
               <motion.article
                 key={index}
-                className={`cursor-pointer bg-accent rounded-xl min-h-[240px] flex items-center justify-center ${
-                  index === expandedIndex ? 'expanded ' : ''
-                }`}
-                variants={cardVariants}
-                initial="collapsed"
-                animate={index === expandedIndex ? 'expanded' : 'collapsed'}
-                transition={{ duration: 0.5 }}
-                onClick={() => handleCardClick(index)}
+                className={`cursor-pointer bg-accent rounded-xl min-h-[240px] flex items-center justify-center`}
+                onClick={() => {
+                  setShowModal(true);
+                  setSelectedIndex(index);
+                }}
               >
                 <motion.h4
                   className="text-3xl"
@@ -65,10 +52,32 @@ export default function Portfolio() {
                   {card.name}
                 </motion.h4>
               </motion.article>
-            </Link>
-          );
-        })}
-      </section>
+            );
+          })}
+
+          <Dialog
+            modal
+            open={showModal}
+            onOpenChange={() => setShowModal(false)}
+          >
+            <DialogContent>
+              <DialogHeader>
+                <DialogTitle>{galleryImages[selectedIndex].name}</DialogTitle>
+              </DialogHeader>
+              <div className="flex flex-col ">
+                {galleryImages[selectedIndex].images.map((src, index) => (
+                  <div
+                    key={index}
+                    className="object-cover rounded-lg overflow-hidden w-full h-full cursor-pointer min-h-[190px]"
+                  >
+                    <Image src={src} alt="images" width={250} height={250} />
+                  </div>
+                ))}
+              </div>
+            </DialogContent>
+          </Dialog>
+        </Dialog>
+      </div>
     </section>
   );
 }
