@@ -64,7 +64,30 @@ export default function Portfolio() {
               <DialogHeader>
                 <DialogTitle>{galleryImages[selectedIndex].name}</DialogTitle>
               </DialogHeader>
-              <div className="flex flex-col ">
+              <section className=" flex flex-col items-center">
+                <div className="rounded-xl w-max h-max object-cover overflow-hidden">
+                  <Image
+                    src={galleryImages[selectedIndex].images[0]}
+                    alt={`${galleryImages[selectedIndex].name} image`}
+                    width={250}
+                    height={250}
+                  />
+                </div>
+
+                <div className="flex flex-wrap items-center justify-center gap-2.5 my-5 w-full overflow-hidden">
+                  {galleryImages[selectedIndex].images.map((src, index) => {
+                    return (
+                      <div
+                        key={index}
+                        className="object-cover rounded-lg overflow-hidden cursor-pointer max-h-[100px] "
+                      >
+                        <Image src={src} alt="image" width={100} height={10} />
+                      </div>
+                    );
+                  })}
+                </div>
+              </section>
+              {/* <div className="columns-2 ">
                 {galleryImages[selectedIndex].images.map((src, index) => (
                   <div
                     key={index}
@@ -73,7 +96,7 @@ export default function Portfolio() {
                     <Image src={src} alt="images" width={250} height={250} />
                   </div>
                 ))}
-              </div>
+              </div> */}
             </DialogContent>
           </Dialog>
         </Dialog>
