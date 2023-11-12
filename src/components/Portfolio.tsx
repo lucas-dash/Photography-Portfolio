@@ -1,6 +1,6 @@
 'use client';
 
-import { useAnimate, motion, stagger } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import {
@@ -9,16 +9,18 @@ import {
   DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog';
-import Modal from './Modal';
 import { galleryImages } from '@/lib/gallery';
 
 export default function Portfolio() {
-  // todo stagger h4
-
   const [showModal, setShowModal] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [selectedImg, setSelectedImg] = useState(0);
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    if (!showModal) {
+      setSelectedImg(0);
+    }
+  }, [showModal]);
 
   return (
     <section className="p-2.5">
@@ -32,7 +34,7 @@ export default function Portfolio() {
         <Dialog>
           {galleryImages.map((card, index) => {
             return (
-              <motion.article
+              <article
                 key={index}
                 className={`cursor-pointer bg-accent rounded-xl min-h-[240px] flex items-center justify-center`}
                 onClick={() => {
@@ -46,12 +48,11 @@ export default function Portfolio() {
                   animate={{ display: 'block', scale: 1 }}
                   transition={{
                     duration: 0.6,
-                    staggerChildren: 0.5,
                   }}
                 >
                   {card.name}
                 </motion.h4>
-              </motion.article>
+              </article>
             );
           })}
 
@@ -64,22 +65,26 @@ export default function Portfolio() {
               <DialogHeader>
                 <DialogTitle>{galleryImages[selectedIndex].name}</DialogTitle>
               </DialogHeader>
-              <section className=" flex flex-col items-center">
-                <div className="rounded-xl w-max h-max object-cover overflow-hidden">
+              <section className="flex flex-col items-center">
+                <div className="rounded-lg w-max h-max object-cover overflow-hidden max-h-80 ">
                   <Image
-                    src={galleryImages[selectedIndex].images[0]}
+                    src={galleryImages[selectedIndex].images[selectedImg]}
                     alt={`${galleryImages[selectedIndex].name} image`}
                     width={250}
                     height={250}
                   />
                 </div>
-
                 <div className="flex flex-wrap items-center justify-center gap-2.5 my-5 w-full overflow-hidden">
                   {galleryImages[selectedIndex].images.map((src, index) => {
                     return (
                       <div
                         key={index}
-                        className="object-cover rounded-lg overflow-hidden cursor-pointer max-h-[100px] "
+                        className={`object-cover rounded-lg overflow-hidden cursor-pointer max-h-[100px] ${
+                          selectedImg === index
+                            ? 'border-2 border-secondary'
+                            : ''
+                        }`}
+                        onClick={() => setSelectedImg(index)}
                       >
                         <Image src={src} alt="image" width={100} height={10} />
                       </div>
@@ -87,16 +92,6 @@ export default function Portfolio() {
                   })}
                 </div>
               </section>
-              {/* <div className="columns-2 ">
-                {galleryImages[selectedIndex].images.map((src, index) => (
-                  <div
-                    key={index}
-                    className="object-cover rounded-lg overflow-hidden w-full h-full cursor-pointer min-h-[190px]"
-                  >
-                    <Image src={src} alt="images" width={250} height={250} />
-                  </div>
-                ))}
-              </div> */}
             </DialogContent>
           </Dialog>
         </Dialog>
