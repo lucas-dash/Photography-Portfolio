@@ -23,8 +23,8 @@ export default function Portfolio() {
   }, [showModal]);
 
   return (
-    <section className="p-2.5">
-      <h3 className="font-medium text-3xl sm:text-4xl sm:text-right text-center sm:px-40 py-8">
+    <section className="p-2.5 container pt-10">
+      <h3 className="font-medium text-3xl sm:text-4xl md:text-5xl sm:text-right text-center px-10 lg:px-40 py-10">
         Portfolio
       </h3>
 
@@ -33,21 +33,33 @@ export default function Portfolio() {
       >
         <Dialog>
           {galleryImages.map((card, index) => {
+            const imageBackground = index === card.index ? card.images[0] : '';
+
             return (
               <article
                 key={index}
-                className={`cursor-pointer bg-accent rounded-xl min-h-[240px] flex items-center justify-center`}
+                className={`cursor-pointer bg-accent rounded-xl min-h-[240px] flex items-center justify-center relative overflow-hidden`}
                 onClick={() => {
                   setShowModal(true);
                   setSelectedIndex(index);
                 }}
               >
+                <div className="absolute inset-0 z-0">
+                  <Image
+                    src={imageBackground}
+                    alt={`cover image of ${card.name}`}
+                    className="object-cover "
+                    fill
+                  />
+                  <div className="bg-accent/70 absolute inset-0 z-10"></div>
+                </div>
                 <motion.h4
-                  className="text-3xl"
+                  className="text-3xl md:text-4xl z-20"
                   initial={{ display: 'none', scale: 0 }}
                   animate={{ display: 'block', scale: 1 }}
                   transition={{
                     duration: 0.6,
+                    delay: 0.2,
                   }}
                 >
                   {card.name}

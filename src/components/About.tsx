@@ -1,7 +1,7 @@
 export default function About() {
   return (
-    <section className="py-5">
-      <h3 className="font-medium text-3xl sm:text-4xl sm:text-left text-center sm:px-40 py-5 ">
+    <section className="py-5 container">
+      <h3 className="font-medium text-3xl sm:text-4xl md:text-5xl sm:text-left text-center px-10 lg:px-40 py-10 ">
         About me
       </h3>
 
