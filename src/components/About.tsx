@@ -15,7 +15,7 @@ export default function About() {
   }, [animate, isInView, scope]);
 
   return (
-    <section className="py-5 container" ref={scope}>
+    <section className="py-5 container" ref={scope} id="about">
       <motion.h3
         className="font-medium text-3xl sm:text-4xl md:text-5xl sm:text-left text-center px-10 lg:px-40 py-10 "
         initial={{ x: -100, opacity: 0 }}

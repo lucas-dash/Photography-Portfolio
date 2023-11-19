@@ -46,7 +46,7 @@ export default function Showcase() {
   }, []);
 
   return (
-    <section className="">
+    <section id="showcase">
       {/* <div className="h-screen"></div> */}
       <div
         ref={container}

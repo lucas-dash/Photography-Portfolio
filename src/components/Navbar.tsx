@@ -3,9 +3,9 @@
 import { AlignRight, Facebook, Instagram, Mail } from 'lucide-react';
 import { Button } from './ui/button';
 import Image from 'next/image';
-import Link from 'next/link';
 import { AnimatePresence, MotionConfig, motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-scroll';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -33,10 +33,28 @@ export default function Navbar() {
 
       <ul className="hidden sm:flex sm:flex-1 pl-5 gap-6 font-medium">
         <li>
-          <Link href={'/#about'}>About</Link>
+          <Link
+            to="about"
+            spy={true}
+            offset={-20}
+            smooth={true}
+            duration={600}
+            className="cursor-pointer"
+          >
+            About
+          </Link>
         </li>
         <li>
-          <Link href={''}>Gallery</Link>
+          <Link
+            to="gallery"
+            spy={true}
+            offset={-20}
+            smooth={true}
+            duration={600}
+            className="cursor-pointer"
+          >
+            Gallery
+          </Link>
         </li>
       </ul>
 
@@ -51,7 +69,18 @@ export default function Navbar() {
         <AlignRight size={26} />
       </Button>
 
-      <Button className="max-sm:hidden rounded-xl">Contact</Button>
+      <Button className="max-sm:hidden rounded-xl" asChild>
+        <Link
+          to="contact"
+          spy={true}
+          offset={-20}
+          smooth={true}
+          duration={600}
+          className="cursor-pointer"
+        >
+          Contact
+        </Link>
+      </Button>
 
       <AnimatePresence>
         {open && (
@@ -103,12 +132,11 @@ export default function Navbar() {
               >
                 <li>
                   <Link
-                    href={''}
-                    // to="about"
-                    // spy={true}
-                    // offset={-20}
-                    // smooth={true}
-                    // duration={100}
+                    to="about"
+                    spy={true}
+                    offset={-20}
+                    smooth={true}
+                    duration={600}
                     aria-label="scroll to About me section"
                     onClick={() => setOpen(false)}
                     className="text-5xl font-medium font-secondary text-text-light hover:text-detail transition-all cursor-pointer"
@@ -119,12 +147,11 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href={''}
-                    // to="gallery"
-                    // spy={true}
-                    // offset={-20}
-                    // smooth={true}
-                    // duration={100}
+                    to="gallery"
+                    spy={true}
+                    offset={-20}
+                    smooth={true}
+                    duration={600}
                     aria-label="scroll to gallery section"
                     onClick={() => setOpen(false)}
                     className="text-5xl font-medium font-secondary text-text-light hover:text-detail transition-all cursor-pointer"
@@ -173,12 +200,11 @@ export default function Navbar() {
                     }}
                   >
                     <Link
-                      href={''}
-                      // to="contact"
-                      // spy={true}
-                      // offset={-20}
-                      // smooth={true}
-                      // duration={100}
+                      to="contact"
+                      spy={true}
+                      offset={-20}
+                      smooth={true}
+                      duration={600}
                       aria-label="scroll to Contact section"
                       onClick={() => setOpen(false)}
                       role="button"

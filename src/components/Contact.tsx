@@ -28,6 +28,7 @@ export default function Contact() {
     <section
       className="text-text-light min-h-[95vh] flex flex-col justify-evenly px-5"
       ref={scope}
+      id="contact"
     >
       <div>
         <motion.h4

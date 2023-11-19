@@ -43,7 +43,7 @@ export default function Portfolio() {
   }, [showModal]);
 
   return (
-    <section className="p-2.5 container pt-10" ref={scope}>
+    <section className="p-2.5 container pt-10" ref={scope} id="gallery">
       <div className="px-10 lg:px-40 py-10">
         <motion.h3
           className="font-medium text-3xl sm:text-4xl md:text-5xl sm:text-right text-center"
