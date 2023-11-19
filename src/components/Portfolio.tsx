@@ -95,7 +95,7 @@ export default function Portfolio() {
                 <DialogTitle>{galleryImages[selectedIndex].name}</DialogTitle>
               </DialogHeader>
               <section className="flex flex-col items-center">
-                <div className="rounded-lg w-max h-max object-cover overflow-hidden max-h-80 ">
+                <div className="rounded-lg w-max h-max object-cover overflow-hidden max-h-80">
                   <Image
                     src={galleryImages[selectedIndex].images[selectedImg]}
                     alt={`${galleryImages[selectedIndex].name} image`}

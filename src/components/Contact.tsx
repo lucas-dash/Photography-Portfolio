@@ -81,11 +81,22 @@ export default function Contact() {
           <Mail />
           <p>lucie.homolkova@gmail.com</p>
         </div>
-        <Link href={''} className="flex gap-5 text-lg">
+        <Link
+          href="https://www.facebook.com/profile.php?id=100000356562716"
+          aria-label="link to my facebook account"
+          rel="noreferrer"
+          className="flex gap-5 text-lg"
+        >
           <Facebook />
           <p>Facebook</p>
         </Link>
-        <Link href={''} className="flex gap-5 text-lg">
+        <Link
+          href="https://www.instagram.com/luci_homolkova/?igshid=MzRlODBiNWFlZA%3D%3D"
+          aria-label="link to my instagram account"
+          rel="noreferrer"
+          target="_blank"
+          className="flex gap-5 text-lg"
+        >
           <Instagram />
           <p>Instagram</p>
         </Link>

@@ -47,7 +47,6 @@ export default function Showcase() {
 
   return (
     <section id="showcase">
-      {/* <div className="h-screen"></div> */}
       <div
         ref={container}
         className="h-[175vh] flex flex-row gap-[2vw] p-[2vw] box-border overflow-hidden"
@@ -57,7 +56,6 @@ export default function Showcase() {
         <Column images={[images[6], images[7], images[8]]} y={y3} />
         <Column images={[images[9], images[10], images[11]]} y={y4} />
       </div>
-      {/* <div className="h-[10vh]"></div> */}
     </section>
   );
 }
