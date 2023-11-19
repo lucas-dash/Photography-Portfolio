@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useTransform, useScroll, MotionValue, motion } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 import useDimension from '@/Hooks/useDimension';
+import Lenis from '@studio-freight/lenis';
 
 const images = [
   '/photos/gallery/3-17211834_411747989180200_5888476739355281183_o.jpg',
@@ -33,7 +34,16 @@ export default function Showcase() {
   const y3 = useTransform(scrollYProgress, [0, 1], [0, height * 1.25]);
   const y4 = useTransform(scrollYProgress, [0, 1], [0, height * 3]);
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time: any) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
 
   return (
     <section className="">
