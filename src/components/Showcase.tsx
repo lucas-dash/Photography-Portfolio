@@ -8,7 +8,7 @@ import Lenis from '@studio-freight/lenis';
 
 const images = [
   '/photos/gallery/3-17211834_411747989180200_5888476739355281183_o.jpg',
-  '/photos/gallery/12-1685539545134.jpg',
+  '/photos/gallery/12-1685539545134.webp',
   '/photos/gallery/6-18671413_444644212557244_1630118547658552211_o.jpg',
   '/photos/gallery/8-19956798_472390743115924_4058120273786721168_o.jpg',
   '/photos/gallery/9-36312387_631533480534982_9078432786288738304_n.jpg',

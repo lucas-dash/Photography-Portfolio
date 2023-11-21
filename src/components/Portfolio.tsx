@@ -99,8 +99,8 @@ export default function Portfolio() {
                   <Image
                     src={galleryImages[selectedIndex].images[selectedImg]}
                     alt={`${galleryImages[selectedIndex].name} image`}
-                    width={250}
-                    height={250}
+                    width={280}
+                    height={280}
                   />
                 </div>
                 <div className="flex flex-wrap items-center justify-center gap-2.5 my-5 w-full overflow-hidden">
@@ -115,7 +115,7 @@ export default function Portfolio() {
                         }`}
                         onClick={() => setSelectedImg(index)}
                       >
-                        <Image src={src} alt="image" width={100} height={10} />
+                        <Image src={src} alt="image" width={100} height={100} />
                       </div>
                     );
                   })}

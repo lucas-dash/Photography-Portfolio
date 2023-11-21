@@ -77,7 +77,7 @@ export default function Contact() {
       </motion.div>
 
       <article className="flex flex-col gap-6 items-center w-max mx-auto">
-        <div className="flex gap-5 text-lg">
+        <div className="flex max-[315px]:flex-col max-[315px]:items-center gap-5 text-lg ">
           <Mail />
           <p>lucie.homolkova@gmail.com</p>
         </div>
