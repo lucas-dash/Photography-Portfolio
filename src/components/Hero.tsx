@@ -36,6 +36,7 @@ export default function Hero() {
               alt="boy kid photo"
               width={168}
               height={227}
+              priority
               className="rounded-sm object-cover h-[180px] w-[125px] min-[370px]:h-[200px] min-[370px]:w-[150px] sm:h-[260px] sm:w-[200px] "
             />
           </motion.div>
@@ -54,6 +55,7 @@ export default function Hero() {
               alt="newborn photo"
               width={168}
               height={221}
+              priority
               className="rounded-sm object-cover h-[180px] w-[125px] min-[370px]:h-[200px] min-[370px]:w-[150px] sm:h-[260px] sm:w-[200px]"
             />
           </motion.div>
