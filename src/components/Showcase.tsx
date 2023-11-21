@@ -4,10 +4,11 @@ import Image from 'next/image';
 import { useTransform, useScroll, MotionValue, motion } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 import useDimension from '@/Hooks/useDimension';
+import Lenis from '@studio-freight/lenis';
 
 const images = [
   '/photos/gallery/3-17211834_411747989180200_5888476739355281183_o.jpg',
-  '/photos/gallery/12-1685539545134.jpg',
+  '/photos/gallery/12-1685539545134.webp',
   '/photos/gallery/6-18671413_444644212557244_1630118547658552211_o.jpg',
   '/photos/gallery/8-19956798_472390743115924_4058120273786721168_o.jpg',
   '/photos/gallery/9-36312387_631533480534982_9078432786288738304_n.jpg',
@@ -33,11 +34,19 @@ export default function Showcase() {
   const y3 = useTransform(scrollYProgress, [0, 1], [0, height * 1.25]);
   const y4 = useTransform(scrollYProgress, [0, 1], [0, height * 3]);
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time: any) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
 
   return (
-    <section className="">
-      {/* <div className="h-screen"></div> */}
+    <section id="showcase">
       <div
         ref={container}
         className="h-[175vh] flex flex-row gap-[2vw] p-[2vw] box-border overflow-hidden"
@@ -47,7 +56,6 @@ export default function Showcase() {
         <Column images={[images[6], images[7], images[8]]} y={y3} />
         <Column images={[images[9], images[10], images[11]]} y={y4} />
       </div>
-      {/* <div className="h-[10vh]"></div> */}
     </section>
   );
 }

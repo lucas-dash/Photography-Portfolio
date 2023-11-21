@@ -43,7 +43,7 @@ export default function Portfolio() {
   }, [showModal]);
 
   return (
-    <section className="p-2.5 container pt-10" ref={scope}>
+    <section className="p-2.5 container pt-10" ref={scope} id="gallery">
       <div className="px-10 lg:px-40 py-10">
         <motion.h3
           className="font-medium text-3xl sm:text-4xl md:text-5xl sm:text-right text-center"
@@ -95,12 +95,12 @@ export default function Portfolio() {
                 <DialogTitle>{galleryImages[selectedIndex].name}</DialogTitle>
               </DialogHeader>
               <section className="flex flex-col items-center">
-                <div className="rounded-lg w-max h-max object-cover overflow-hidden max-h-80 ">
+                <div className="rounded-lg w-max h-max object-cover overflow-hidden max-h-80">
                   <Image
                     src={galleryImages[selectedIndex].images[selectedImg]}
                     alt={`${galleryImages[selectedIndex].name} image`}
-                    width={250}
-                    height={250}
+                    width={280}
+                    height={280}
                   />
                 </div>
                 <div className="flex flex-wrap items-center justify-center gap-2.5 my-5 w-full overflow-hidden">
@@ -115,7 +115,7 @@ export default function Portfolio() {
                         }`}
                         onClick={() => setSelectedImg(index)}
                       >
-                        <Image src={src} alt="image" width={100} height={10} />
+                        <Image src={src} alt="image" width={100} height={100} />
                       </div>
                     );
                   })}

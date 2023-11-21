@@ -1,5 +1,6 @@
 import useCounter from '@/Hooks/useCounter';
 import { Button } from './ui/button';
+import { Link } from 'react-scroll';
 
 export default function Testimonials() {
   const clients = useCounter(20, 1.5);
@@ -28,8 +29,18 @@ export default function Testimonials() {
       <Button
         variant={'ghost'}
         className="border border-secondary rounded-xl hover:bg-secondary hover:text-text-light"
+        asChild
       >
-        Discover
+        <Link
+          to="showcase"
+          spy={true}
+          offset={850}
+          smooth={true}
+          duration={1200}
+          className="cursor-pointer"
+        >
+          Discover
+        </Link>
       </Button>
     </section>
   );

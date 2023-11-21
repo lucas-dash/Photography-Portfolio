@@ -28,6 +28,7 @@ export default function Contact() {
     <section
       className="text-text-light min-h-[95vh] flex flex-col justify-evenly px-5"
       ref={scope}
+      id="contact"
     >
       <div>
         <motion.h4
@@ -76,15 +77,26 @@ export default function Contact() {
       </motion.div>
 
       <article className="flex flex-col gap-6 items-center w-max mx-auto">
-        <div className="flex gap-5 text-lg">
+        <div className="flex max-[315px]:flex-col max-[315px]:items-center gap-5 text-lg ">
           <Mail />
           <p>lucie.homolkova@gmail.com</p>
         </div>
-        <Link href={''} className="flex gap-5 text-lg">
+        <Link
+          href="https://www.facebook.com/profile.php?id=100000356562716"
+          aria-label="link to my facebook account"
+          rel="noreferrer"
+          className="flex gap-5 text-lg"
+        >
           <Facebook />
           <p>Facebook</p>
         </Link>
-        <Link href={''} className="flex gap-5 text-lg">
+        <Link
+          href="https://www.instagram.com/luci_homolkova/?igshid=MzRlODBiNWFlZA%3D%3D"
+          aria-label="link to my instagram account"
+          rel="noreferrer"
+          target="_blank"
+          className="flex gap-5 text-lg"
+        >
           <Instagram />
           <p>Instagram</p>
         </Link>

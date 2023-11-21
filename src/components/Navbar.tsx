@@ -3,9 +3,9 @@
 import { AlignRight, Facebook, Instagram, Mail } from 'lucide-react';
 import { Button } from './ui/button';
 import Image from 'next/image';
-import Link from 'next/link';
 import { AnimatePresence, MotionConfig, motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-scroll';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -22,7 +22,7 @@ export default function Navbar() {
     <motion.nav
       className={`flex w-full justify-between items-center container h-[60px] relative z-[60]`}
     >
-      <div className="flex items-center gap-10">
+      <div className="flex items-center justify-center">
         <Image
           src={'/logo.svg'}
           alt="Lucie Homolková Logo"
@@ -31,12 +31,30 @@ export default function Navbar() {
         />
       </div>
 
-      <ul className="hidden sm:flex sm:flex-1 pl-5 gap-6 font-medium">
+      <ul className="hidden sm:flex sm:flex-1 pl-10 gap-5 font-medium">
         <li>
-          <Link href={'/#about'}>About</Link>
+          <Link
+            to="about"
+            spy={true}
+            offset={-20}
+            smooth={true}
+            duration={600}
+            className="cursor-pointer text-lg"
+          >
+            About
+          </Link>
         </li>
         <li>
-          <Link href={''}>Gallery</Link>
+          <Link
+            to="gallery"
+            spy={true}
+            offset={-20}
+            smooth={true}
+            duration={600}
+            className="cursor-pointer text-lg"
+          >
+            Gallery
+          </Link>
         </li>
       </ul>
 
@@ -51,7 +69,18 @@ export default function Navbar() {
         <AlignRight size={26} />
       </Button>
 
-      <Button className="max-sm:hidden rounded-xl">Contact</Button>
+      <Button className="max-sm:hidden rounded-xl" asChild>
+        <Link
+          to="contact"
+          spy={true}
+          offset={-20}
+          smooth={true}
+          duration={600}
+          className="cursor-pointer"
+        >
+          Contact
+        </Link>
+      </Button>
 
       <AnimatePresence>
         {open && (
@@ -103,12 +132,11 @@ export default function Navbar() {
               >
                 <li>
                   <Link
-                    href={''}
-                    // to="about"
-                    // spy={true}
-                    // offset={-20}
-                    // smooth={true}
-                    // duration={100}
+                    to="about"
+                    spy={true}
+                    offset={-20}
+                    smooth={true}
+                    duration={600}
                     aria-label="scroll to About me section"
                     onClick={() => setOpen(false)}
                     className="text-5xl font-medium font-secondary text-text-light hover:text-detail transition-all cursor-pointer"
@@ -119,12 +147,11 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href={''}
-                    // to="gallery"
-                    // spy={true}
-                    // offset={-20}
-                    // smooth={true}
-                    // duration={100}
+                    to="gallery"
+                    spy={true}
+                    offset={-20}
+                    smooth={true}
+                    duration={600}
                     aria-label="scroll to gallery section"
                     onClick={() => setOpen(false)}
                     className="text-5xl font-medium font-secondary text-text-light hover:text-detail transition-all cursor-pointer"
@@ -169,16 +196,14 @@ export default function Navbar() {
                     transition={{
                       duration: 0.2,
                       type: 'spring',
-                      stiffness: 180,
                     }}
                   >
                     <Link
-                      href={''}
-                      // to="contact"
-                      // spy={true}
-                      // offset={-20}
-                      // smooth={true}
-                      // duration={100}
+                      to="contact"
+                      spy={true}
+                      offset={-20}
+                      smooth={true}
+                      duration={600}
                       aria-label="scroll to Contact section"
                       onClick={() => setOpen(false)}
                       role="button"
@@ -195,13 +220,12 @@ export default function Navbar() {
                     transition={{
                       duration: 0.2,
                       type: 'spring',
-                      stiffness: 180,
                     }}
                   >
                     <a
                       href="https://www.instagram.com/luci_homolkova/?igshid=MzRlODBiNWFlZA%3D%3D"
                       target="_blank"
-                      aria-label="instagram link"
+                      aria-label="link to my instagram account"
                       rel="noreferrer"
                     >
                       <Instagram size={24} />
@@ -216,13 +240,12 @@ export default function Navbar() {
                     transition={{
                       duration: 0.2,
                       type: 'spring',
-                      stiffness: 180,
                     }}
                   >
                     <a
                       href="https://www.facebook.com/profile.php?id=100000356562716"
                       target="_blank"
-                      aria-label="facebook link"
+                      aria-label="link to my facebook account"
                       rel="noreferrer"
                     >
                       <Facebook size={24} />
