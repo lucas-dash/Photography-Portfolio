@@ -1,6 +1,6 @@
 'use client';
 
-import { AlignRight, Facebook, Instagram, Mail } from 'lucide-react';
+import { AlignRight, Facebook, Instagram, Mail, X } from 'lucide-react';
 import { Button } from './ui/button';
 import Image from 'next/image';
 import { AnimatePresence, MotionConfig, motion } from 'framer-motion';
@@ -66,7 +66,7 @@ export default function Navbar() {
         }`}
         onClick={() => setOpen((prev) => !prev)}
       >
-        <AlignRight size={26} />
+        {open ? <X size={26} /> : <AlignRight size={26} />}
       </Button>
 
       <Button className="max-sm:hidden rounded-xl" asChild>

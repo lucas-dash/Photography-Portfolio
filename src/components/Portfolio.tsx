@@ -17,7 +17,7 @@ export default function Portfolio() {
   const [selectedImg, setSelectedImg] = useState(0);
 
   const [scope, animate] = useAnimate();
-  const isInView = useInView(scope, { amount: 0.2 });
+  const isInView = useInView(scope, { amount: 0.2, once: true });
 
   useEffect(() => {
     if (isInView) {
@@ -58,7 +58,7 @@ export default function Portfolio() {
       >
         <Dialog>
           {galleryImages.map((card, index) => {
-            const imageBackground = index === card.index ? card.images[0] : '';
+            const imageBackground = index === card.index ? card.images[3] : '';
 
             return (
               <article
@@ -85,12 +85,8 @@ export default function Portfolio() {
             );
           })}
 
-          <Dialog
-            modal
-            open={showModal}
-            onOpenChange={() => setShowModal(false)}
-          >
-            <DialogContent>
+          <Dialog open={showModal} onOpenChange={setShowModal}>
+            <DialogContent className="w-max">
               <DialogHeader>
                 <DialogTitle>{galleryImages[selectedIndex].name}</DialogTitle>
               </DialogHeader>
@@ -101,6 +97,8 @@ export default function Portfolio() {
                     alt={`${galleryImages[selectedIndex].name} image`}
                     width={280}
                     height={280}
+                    loading="lazy"
+                    className="object-cover"
                   />
                 </div>
                 <div className="flex flex-wrap items-center justify-center gap-2.5 my-5 w-full overflow-hidden">
@@ -115,7 +113,14 @@ export default function Portfolio() {
                         }`}
                         onClick={() => setSelectedImg(index)}
                       >
-                        <Image src={src} alt="image" width={100} height={100} />
+                        <Image
+                          src={src}
+                          alt="image"
+                          width={100}
+                          height={100}
+                          className="object-cover"
+                          loading="lazy"
+                        />
                       </div>
                     );
                   })}

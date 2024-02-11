@@ -51,7 +51,7 @@ export default function Hero() {
             className="bg-text-light rounded-md p-3 pb-5 w-max h-max shadow-[0_4px_29px_0] shadow-black/25 z-10"
           >
             <Image
-              src={'/photos/materniny/2.webp'}
+              src={'/photos/materniny/4.jpg'}
               alt="newborn photo"
               width={168}
               height={221}
