@@ -1,6 +1,6 @@
 'use client';
 
-import { AlignRight, Facebook, Instagram, Mail, X } from 'lucide-react';
+import { AlignRight, X } from 'lucide-react';
 import { Button } from './ui/button';
 import Image from 'next/image';
 import { AnimatePresence, MotionConfig, motion } from 'framer-motion';
@@ -160,6 +160,21 @@ export default function Navbar() {
                     Gallery
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    to="contact"
+                    spy={true}
+                    offset={-20}
+                    smooth={true}
+                    duration={600}
+                    aria-label="scroll to Contact section"
+                    onClick={() => setOpen(false)}
+                    role="button"
+                    className="text-5xl font-medium font-secondary text-text-light hover:text-detail transition-all cursor-pointer"
+                  >
+                    Contact
+                  </Link>
+                </li>
               </motion.ul>
 
               <motion.div
@@ -175,84 +190,6 @@ export default function Navbar() {
                 }}
                 className="w-full h-[2px] rounded-full bg-detail"
               ></motion.div>
-              <motion.ul
-                variants={{
-                  hide: {
-                    y: '25%',
-                    opacity: 0,
-                  },
-                  show: {
-                    y: '0%',
-                    opacity: 1,
-                  },
-                }}
-                className="list-none flex justify-center gap-x-4"
-              >
-                <li>
-                  <motion.div
-                    className="bg-primary flex items-center justify-center rounded-lg w-10 h-10 "
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                    transition={{
-                      duration: 0.2,
-                      type: 'spring',
-                    }}
-                  >
-                    <Link
-                      to="contact"
-                      spy={true}
-                      offset={-20}
-                      smooth={true}
-                      duration={600}
-                      aria-label="scroll to Contact section"
-                      onClick={() => setOpen(false)}
-                      role="button"
-                    >
-                      <Mail size={24} />
-                    </Link>
-                  </motion.div>
-                </li>
-                <li>
-                  <motion.div
-                    className="bg-primary flex items-center justify-center rounded-lg w-10 h-10 "
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                    transition={{
-                      duration: 0.2,
-                      type: 'spring',
-                    }}
-                  >
-                    <a
-                      href="https://www.instagram.com/luci_homolkova/?igshid=MzRlODBiNWFlZA%3D%3D"
-                      target="_blank"
-                      aria-label="link to my instagram account"
-                      rel="noreferrer"
-                    >
-                      <Instagram size={24} />
-                    </a>
-                  </motion.div>
-                </li>
-                <li>
-                  <motion.div
-                    className="bg-primary flex items-center justify-center rounded-lg w-10 h-10 "
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                    transition={{
-                      duration: 0.2,
-                      type: 'spring',
-                    }}
-                  >
-                    <a
-                      href="https://www.facebook.com/profile.php?id=100000356562716"
-                      target="_blank"
-                      aria-label="link to my facebook account"
-                      rel="noreferrer"
-                    >
-                      <Facebook size={24} />
-                    </a>
-                  </motion.div>
-                </li>
-              </motion.ul>
             </motion.div>
           </MotionConfig>
         )}

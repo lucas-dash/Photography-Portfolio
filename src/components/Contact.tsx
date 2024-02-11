@@ -1,7 +1,6 @@
 'use client';
 
-import { Mail, Facebook, Instagram } from 'lucide-react';
-import Link from 'next/link';
+import { Mail } from 'lucide-react';
 import { motion, useInView, useAnimate, stagger } from 'framer-motion';
 import { useEffect } from 'react';
 
@@ -11,7 +10,6 @@ export default function Contact() {
 
   useEffect(() => {
     if (isInView) {
-      animate('h4', { y: 0, opacity: 1 }, { delay: 0, duration: 0.4 });
       animate('h3', { y: 0, opacity: 1 }, { delay: 0.5, duration: 0.4 });
       animate(
         '.svgpath',
@@ -19,33 +17,40 @@ export default function Contact() {
         { duration: 2, ease: 'easeInOut', delay: 0.5 }
       );
     } else {
-      animate('h4', { y: 20, opacity: 0 }, { delay: 0, duration: 0.4 });
       animate('h3', { y: 20, opacity: 0 }, { delay: 0.5, duration: 0.4 });
     }
   }, [animate, isInView, scope]);
 
   return (
     <section
-      className="text-text-light min-h-[95vh] flex flex-col justify-evenly px-5"
+      className="text-text-light min-h-[80dvh] flex flex-col justify-evenly px-5"
       ref={scope}
       id="contact"
     >
-      <div>
-        <motion.h4
-          className="font-medium text-4xl text-center pb-10"
-          initial={{ y: 20, opacity: 0 }}
-        >
-          Need Photographer?
-        </motion.h4>
-        <motion.h3
-          className="font-medium text-3xl text-center"
-          initial={{ y: 20, opacity: 0 }}
-        >
-          Contact Me
-        </motion.h3>
+      <motion.h3
+        className="font-medium text-3xl text-center"
+        initial={{ y: 20, opacity: 0 }}
+      >
+        Contact Me
+      </motion.h3>
+
+      <div className="flex flex-col items-center gap-10">
+        <p className="text-lg text-center">
+          If you have any questions please do contact me on my email.
+        </p>
+
+        <div className="flex max-[315px]:flex-col max-[315px]:items-center gap-2 text-lg ">
+          <Mail />
+          <p className="font-medium">lu.homolkova@gmail.com</p>
+        </div>
+
+        <p className="text-center text-lg max-w-sm">
+          I&apos;m looking forward to meet anyone who is interested in family
+          photo session with me. Lucie
+        </p>
       </div>
 
-      <motion.div className="w-20 relative rotate-45 lg:rotate-12 lg:top-12 left-1/2 -translate-x-1/2 md:left-1/4 2xl:left-[35%]">
+      <motion.div className="w-20 relative -rotate-90 top-0 left-1/2 -translate-x-1/2 ">
         <svg
           width="110"
           height="110"
@@ -75,32 +80,6 @@ export default function Contact() {
           />
         </svg>
       </motion.div>
-
-      <article className="flex flex-col gap-6 items-center w-max mx-auto">
-        <div className="flex max-[315px]:flex-col max-[315px]:items-center gap-5 text-lg ">
-          <Mail />
-          <p>lucie.homolkova@gmail.com</p>
-        </div>
-        <Link
-          href="https://www.facebook.com/profile.php?id=100000356562716"
-          aria-label="link to my facebook account"
-          rel="noreferrer"
-          className="flex gap-5 text-lg"
-        >
-          <Facebook />
-          <p>Facebook</p>
-        </Link>
-        <Link
-          href="https://www.instagram.com/luci_homolkova/?igshid=MzRlODBiNWFlZA%3D%3D"
-          aria-label="link to my instagram account"
-          rel="noreferrer"
-          target="_blank"
-          className="flex gap-5 text-lg"
-        >
-          <Instagram />
-          <p>Instagram</p>
-        </Link>
-      </article>
     </section>
   );
 }
