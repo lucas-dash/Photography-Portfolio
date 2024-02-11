@@ -4,8 +4,7 @@ import { Link } from 'react-scroll';
 
 export default function Testimonials() {
   const clients = useCounter(20, 1.5);
-  const experience = useCounter(10, 1.5);
-  const awards = useCounter(1, 0.5);
+  const experience = useCounter(7, 1.5);
 
   return (
     <section className="flex flex-col items-center gap-3 md:gap-10 md:px-16 md:w-max md:mb-10">
@@ -17,12 +16,8 @@ export default function Testimonials() {
           </p>
         </div>
         <div className="flex flex-col items-center px-1">
-          <p className="font-bold text-3xl md:text-4xl">{clients}</p>
+          <p className="font-bold text-3xl md:text-4xl">{clients}+</p>
           <p className="text-text-gray text-xs">Clients</p>
-        </div>
-        <div className="flex flex-col items-center px-1">
-          <p className="font-bold text-3xl md:text-4xl">{awards}</p>
-          <p className="text-text-gray text-xs">Awards</p>
         </div>
       </article>
 

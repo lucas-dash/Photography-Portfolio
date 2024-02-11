@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 export default function Hero() {
   return (
-    <header className="bg-primary min-h-screen h-full flex flex-col justify-between pb-10 2xl:container">
+    <header className="bg-primary min-h-[100dvh] h-full flex flex-col justify-between pb-10 2xl:container">
       <Navbar />
 
       <div className="h-full w-full grid grid-rows-[150px_1fr] md:grid-cols-2 md:grid-rows-1 py-5 px-2 sm:px-5 lg:px-10 text-center md:text-left ">

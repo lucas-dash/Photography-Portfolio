@@ -86,7 +86,7 @@ export default function Portfolio() {
           })}
 
           <Dialog open={showModal} onOpenChange={setShowModal}>
-            <DialogContent className="w-max">
+            <DialogContent>
               <DialogHeader>
                 <DialogTitle>{galleryImages[selectedIndex].name}</DialogTitle>
               </DialogHeader>
