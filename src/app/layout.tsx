@@ -5,7 +5,7 @@ import './globals.css';
 const workSans = Work_Sans({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Photo Portfolio',
+  title: 'Lucie Homolkova Portfolio',
   description: 'Lucie Homolkova photography portfolio',
 };
 
