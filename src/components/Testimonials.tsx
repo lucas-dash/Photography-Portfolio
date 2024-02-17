@@ -29,7 +29,7 @@ export default function Testimonials() {
         <Link
           to="showcase"
           spy={true}
-          offset={850}
+          offset={10}
           smooth={true}
           duration={1200}
           className="cursor-pointer"

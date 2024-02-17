@@ -5,20 +5,20 @@ import cloudinary from 'cloudinary';
 import { CloudinaryResponseType } from '@/Types/cloudinary';
 
 export const metadata: Metadata = {
-  title: 'Family Gallery',
-  description: 'Family photoshooting',
+  title: 'Kids Gallery',
+  description: 'Kids photoshooting',
 };
 
-export default async function Family() {
+export default async function Kids() {
   const results = (await cloudinary.v2.search
-    .expression('folder:Family AND resource_type:image')
+    .expression('folder:Kids AND resource_type:image')
     .max_results(10)
     .execute()) as CloudinaryResponseType;
 
   return (
     <main className="container">
-      <SectionHeader title="Family Gallery" />
-      <Gallery result={results.resources} alt="Family Images" />
+      <SectionHeader title="Kids Gallery" />
+      <Gallery result={results.resources} alt="Kids Images" />
     </main>
   );
 }

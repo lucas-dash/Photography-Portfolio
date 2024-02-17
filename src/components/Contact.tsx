@@ -28,7 +28,7 @@ export default function Contact() {
       id="contact"
     >
       <motion.h3
-        className="font-medium text-3xl text-center"
+        className="font-medium text-3xl sm:text-4xl md:text-5xl text-center"
         initial={{ y: 20, opacity: 0 }}
       >
         Contact Me

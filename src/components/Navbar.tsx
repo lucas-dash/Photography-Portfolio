@@ -32,20 +32,21 @@ export default function Navbar() {
       </div>
 
       <ul className="hidden sm:flex sm:flex-1 pl-10 gap-5 font-medium">
-        <li>
+        <li className='relative cursor-pointer transition-all duration-500 before:content-[""] before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-1 before:rounded-full before:opacity-0 before:transition-all before:duration-500 before:bg-accent hover:before:w-full hover:before:opacity-100'>
           <Link
             to="about"
             spy={true}
             offset={-20}
             smooth={true}
             duration={600}
+            role="button"
             className="cursor-pointer text-lg"
-            aria-description="scroll to about me section"
+            aria-describedby="scroll to about me section"
           >
             About
           </Link>
         </li>
-        <li>
+        <li className='relative cursor-pointer transition-all duration-500 before:content-[""] before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-1 before:rounded-full before:opacity-0 before:transition-all before:duration-500 before:bg-accent hover:before:w-full hover:before:opacity-100'>
           <Link
             to="gallery"
             spy={true}
@@ -53,7 +54,8 @@ export default function Navbar() {
             smooth={true}
             duration={600}
             className="cursor-pointer text-lg"
-            aria-description="scroll to gallery section"
+            role="button"
+            aria-describedby="scroll to gallery section"
           >
             Gallery
           </Link>
@@ -79,7 +81,8 @@ export default function Navbar() {
           smooth={true}
           duration={600}
           className="cursor-pointer"
-          aria-description="scroll to contact section"
+          role="button"
+          aria-describedby="scroll to contact section"
         >
           Contact
         </Link>
@@ -140,7 +143,7 @@ export default function Navbar() {
                     offset={-20}
                     smooth={true}
                     duration={600}
-                    aria-label="scroll to About me section"
+                    aria-describedby="scroll to About me section"
                     onClick={() => setOpen(false)}
                     className="text-5xl font-medium font-secondary text-text-light hover:text-detail transition-all cursor-pointer"
                     role="button"
@@ -155,7 +158,7 @@ export default function Navbar() {
                     offset={-20}
                     smooth={true}
                     duration={600}
-                    aria-label="scroll to gallery section"
+                    aria-describedby="scroll to gallery section"
                     onClick={() => setOpen(false)}
                     className="text-5xl font-medium font-secondary text-text-light hover:text-detail transition-all cursor-pointer"
                     role="button"
@@ -170,7 +173,7 @@ export default function Navbar() {
                     offset={-20}
                     smooth={true}
                     duration={600}
-                    aria-label="scroll to Contact section"
+                    aria-describedby="scroll to Contact section"
                     onClick={() => setOpen(false)}
                     role="button"
                     className="text-5xl font-medium font-secondary text-text-light hover:text-detail transition-all cursor-pointer"
