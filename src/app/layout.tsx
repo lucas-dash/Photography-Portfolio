@@ -5,8 +5,12 @@ import './globals.css';
 const workSans = Work_Sans({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Lucie Homolkova Portfolio',
-  description: 'Lucie Homolkova photography portfolio',
+  title: {
+    default: 'Lucie Homolkova Portfolio',
+    template: '%s - Lucie Homolkova Portfolio',
+  },
+  description: 'Horsham photoshooting',
+  keywords: ['Photo', 'Photoshooting'],
 };
 
 export default function RootLayout({

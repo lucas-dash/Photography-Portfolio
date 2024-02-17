@@ -40,6 +40,7 @@ export default function Navbar() {
             smooth={true}
             duration={600}
             className="cursor-pointer text-lg"
+            aria-description="scroll to about me section"
           >
             About
           </Link>
@@ -52,6 +53,7 @@ export default function Navbar() {
             smooth={true}
             duration={600}
             className="cursor-pointer text-lg"
+            aria-description="scroll to gallery section"
           >
             Gallery
           </Link>
@@ -77,6 +79,7 @@ export default function Navbar() {
           smooth={true}
           duration={600}
           className="cursor-pointer"
+          aria-description="scroll to contact section"
         >
           Contact
         </Link>

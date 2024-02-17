@@ -19,7 +19,7 @@ export default function ImageColumn() {
   return (
     <section
       id="showcase"
-      className="min-h-screen columns-2 lg:columns-4 space-y-4 -mb-10 pt-4  px-2"
+      className="min-h-screen columns-2 lg:columns-4 space-y-4 -mb-10 pt-4 px-2"
     >
       {images.map((src, index) => {
         return (

@@ -40,4 +40,4 @@ export const galleryImages = [
       '/photos/materniny/4.jpg',
     ],
   },
-] as const;
+];

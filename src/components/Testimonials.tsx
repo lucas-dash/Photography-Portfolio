@@ -9,7 +9,7 @@ export default function Testimonials() {
   return (
     <section className="flex flex-col items-center gap-3 md:gap-10 md:px-16 md:w-max md:mb-10">
       <article className="flex items-start gap-6 w-full justify-center md:justify-start">
-        <div className="flex flex-col items-center px-1">
+        <div className="flex flex-col items-center px-1 ">
           <p className="font-bold text-3xl md:text-4xl">{experience}+</p>
           <p className="text-text-gray text-xs text-center">
             Years of <br /> Experience
