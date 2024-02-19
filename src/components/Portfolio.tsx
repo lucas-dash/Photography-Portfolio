@@ -50,9 +50,10 @@ export default function Portfolio() {
               <Link
                 href={`/${name}`}
                 aria-label={`Link to ${name} gallery`}
-                aria-describedby={`Check all ${name} gallery`}
+                aria-describedby={`Check all ${name} gallery photos`}
+                className="absolute inset-0 group"
               >
-                <div className="group">
+                <div className="relative h-full w-full ">
                   <Image
                     src={cover}
                     alt={`cover image of ${name} gallery`}
@@ -61,11 +62,13 @@ export default function Portfolio() {
                     loading="lazy"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
-                  <div className="bg-accent/60 hover:bg-accent/40 transition-all ease-out absolute inset-0 z-10"></div>
                 </div>
-                <h5 className="text-3xl md:text-4xl relative z-20 capitalize">
-                  {name}
-                </h5>
+                <div className="absolute flex items-center justify-center inset-0">
+                  <div className="bg-accent/60 hover:bg-accent/20 transition-all ease-out absolute inset-0 z-10"></div>
+                  <h5 className="text-3xl md:text-4xl relative z-50 capitalize">
+                    {name}
+                  </h5>
+                </div>
               </Link>
             </article>
           );
