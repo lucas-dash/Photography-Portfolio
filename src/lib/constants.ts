@@ -2,21 +2,21 @@ export const galleryImageCovers = [
   {
     id: 0,
     name: 'family',
-    cover: '/photos/family/1.webp',
+    cover: '/family.webp',
   },
   {
     id: 1,
     name: 'kids',
-    cover: '/photos/kids/4.jpg',
+    cover: '/kids.webp',
   },
   {
     id: 2,
     name: 'newborn',
-    cover: '/photos/newborn/5.webp',
+    cover: '/newborn.webp',
   },
   {
     id: 3,
     name: 'moments',
-    cover: '/photos/materniny/4.jpg',
+    cover: '/moments.webp',
   },
 ];
