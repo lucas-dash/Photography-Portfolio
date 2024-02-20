@@ -24,7 +24,6 @@ export default function Testimonials() {
       <Button
         variant={'ghost'}
         className="border border-secondary rounded-xl hover:bg-secondary hover:text-text-light"
-        asChild
       >
         <Link
           to="showcase"
@@ -33,7 +32,6 @@ export default function Testimonials() {
           smooth={true}
           duration={1200}
           className="cursor-pointer"
-          aria-label="Discover"
           aria-describedby="scroll to showcase section"
         >
           Discover

@@ -14,13 +14,13 @@ export default function Portfolio() {
     if (isInView) {
       animate('h3', { x: 0, opacity: 1 }, { delay: 0, duration: 0.6 });
       animate(
-        'h5',
+        'h4',
         { scale: 1, opacity: 1 },
         { delay: stagger(0.3), duration: 0.6 }
       );
     } else {
       animate(
-        'h5',
+        'h4',
         { scale: 0, opacity: 0 },
         { delay: stagger(0.3), duration: 0.6 }
       );
@@ -65,9 +65,9 @@ export default function Portfolio() {
                 </div>
                 <div className="absolute flex items-center justify-center inset-0">
                   <div className="bg-accent/60 hover:bg-accent/20 transition-all ease-out absolute inset-0 z-10"></div>
-                  <h5 className="text-3xl md:text-4xl relative z-50 capitalize">
+                  <h4 className="text-3xl md:text-4xl relative z-50 capitalize">
                     {name}
-                  </h5>
+                  </h4>
                 </div>
               </Link>
             </article>
