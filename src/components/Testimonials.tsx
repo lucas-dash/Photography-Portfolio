@@ -33,6 +33,8 @@ export default function Testimonials() {
           smooth={true}
           duration={1200}
           className="cursor-pointer"
+          aria-label="Discover"
+          aria-describedby="scroll to showcase section"
         >
           Discover
         </Link>
