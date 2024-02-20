@@ -7,12 +7,12 @@ type SectionHeaderProps = {
 };
 export default function SectionHeader({ title }: SectionHeaderProps) {
   return (
-    <section className="max-sm:text-center py-8 flex items-center justify-between">
+    <section className=" py-8 flex items-center justify-between gap-2">
       <h1 className="text-3xl md:text-4xl font-semibold">{title}</h1>
-      <Button size={'icon'} asChild className="rounded-xl">
+      <Button asChild size={'icon'} className="rounded-xl flex-shrink-0">
         <Link
           href={'/'}
-          aria-label="back to homepage"
+          aria-label="Homepage"
           aria-describedby="Link to homepage"
         >
           <ChevronLeft />

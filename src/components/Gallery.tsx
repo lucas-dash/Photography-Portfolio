@@ -4,11 +4,11 @@ import CldImage from './ui/CldImage';
 import { ImageResponse } from '@/Types/cloudinary';
 import { motion } from 'framer-motion';
 
-type Props = {
+type GalleryProps = {
   result: ImageResponse[];
   alt: string;
 };
-export default function Gallery({ result, alt }: Props) {
+export default function Gallery({ result, alt }: GalleryProps) {
   const containerVariants = {
     hidden: {},
     visible: {
@@ -34,7 +34,7 @@ export default function Gallery({ result, alt }: Props) {
       initial="hidden"
       animate="visible"
     >
-      {result.map((data) => {
+      {result.map((data, index) => {
         return (
           <motion.div key={data.public_id} variants={itemVariants}>
             <CldImage
@@ -44,6 +44,7 @@ export default function Gallery({ result, alt }: Props) {
               height={300}
               aspectRatio={data.aspect_ratio}
               className="rounded-xl object-cover"
+              priority={index < 4}
             />
           </motion.div>
         );

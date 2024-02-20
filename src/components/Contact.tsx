@@ -1,12 +1,12 @@
 'use client';
 
 import { Mail } from 'lucide-react';
-import { motion, useInView, useAnimate, stagger } from 'framer-motion';
+import { motion, useInView, useAnimate } from 'framer-motion';
 import { useEffect } from 'react';
 
 export default function Contact() {
   const [scope, animate] = useAnimate();
-  const isInView = useInView(scope, { amount: 0.6 });
+  const isInView = useInView(scope, { amount: 0.2 });
 
   useEffect(() => {
     if (isInView) {

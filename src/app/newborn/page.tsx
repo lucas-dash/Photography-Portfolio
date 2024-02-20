@@ -7,6 +7,7 @@ import { CloudinaryResponseType } from '@/Types/cloudinary';
 export const metadata: Metadata = {
   title: 'Newborn Gallery',
   description: 'Newborn photoshooting',
+  keywords: ['Newborn Gallery', 'Photoshooting'],
 };
 
 export default async function Newborn() {

@@ -23,6 +23,7 @@ export default async function Showcase() {
             height={data.height}
             aspectRatio={data.aspect_ratio}
             className="rounded-xl object-cover"
+            priority
           />
         );
       })}

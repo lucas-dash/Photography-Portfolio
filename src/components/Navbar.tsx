@@ -25,7 +25,7 @@ export default function Navbar() {
       <div className="flex items-center justify-center">
         <Image
           src={'/logo.svg'}
-          alt="Lucie Homolková Logo"
+          alt="Lucie Homolková Photography Logo"
           width={44}
           height={44}
         />
@@ -182,20 +182,6 @@ export default function Navbar() {
                   </Link>
                 </li>
               </motion.ul>
-
-              <motion.div
-                variants={{
-                  hide: {
-                    y: '25%',
-                    opacity: 0,
-                  },
-                  show: {
-                    y: '0%',
-                    opacity: 1,
-                  },
-                }}
-                className="w-full h-[2px] rounded-full bg-detail"
-              ></motion.div>
             </motion.div>
           </MotionConfig>
         )}

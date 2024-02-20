@@ -10,7 +10,7 @@ export default function Hero() {
     <header className="bg-primary min-h-[100dvh] h-full flex flex-col justify-between pb-10 2xl:container">
       <Navbar />
 
-      <div className="h-full w-full grid grid-rows-[150px_1fr] md:grid-cols-2 md:grid-rows-1 py-5 px-2 sm:px-5 lg:px-10 text-center md:text-left ">
+      <div className="h-full w-full grid grid-rows-[150px_1fr] md:grid-cols-2 md:grid-rows-1 py-5 px-1 sm:px-5 lg:px-10 text-center md:text-left ">
         <motion.h1
           className="text-[2rem] sm:text-4xl md:text-5xl lg:text-6xl z-50 font-normal"
           initial={{ y: 30, opacity: 0 }}
@@ -23,13 +23,13 @@ export default function Hero() {
         <section className="flex items-center justify-center relative">
           <motion.div
             initial={{ x: 12, y: -25, rotate: '5deg' }}
-            animate={{ x: 12, y: -25, rotate: '-8deg' }}
+            animate={{ x: 22, y: -25, rotate: '-8deg' }}
             transition={{
               delay: 0.3,
               duration: 0.6,
               type: 'spring',
             }}
-            className="bg-text-light rounded-md p-3 pb-5 w-max h-max shadow-[0_4px_29px_0] shadow-black/25 z-20"
+            className="bg-text-light rounded-md p-3 pb-5 w-max h-max origin-center shadow-[0_4px_29px_0] shadow-black/25 z-20"
           >
             <Image
               src={'/hero-1.webp'}
@@ -42,13 +42,13 @@ export default function Hero() {
           </motion.div>
           <motion.div
             initial={{ x: -18, y: 25, rotate: '-8deg' }}
-            animate={{ x: -18, y: 25, rotate: '14deg' }}
+            animate={{ x: -32, y: 25, rotate: '14deg' }}
             transition={{
               delay: 0.4,
               duration: 0.8,
               type: 'spring',
             }}
-            className="bg-text-light rounded-md p-3 pb-5 w-max h-max shadow-[0_4px_29px_0] shadow-black/25 z-10"
+            className="bg-text-light rounded-md p-3 pb-5 w-max h-max origin-center shadow-[0_4px_29px_0] shadow-black/25 z-10"
           >
             <Image
               src={'/moments.webp'}
