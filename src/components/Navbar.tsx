@@ -69,6 +69,8 @@ export default function Navbar() {
           open ? 'bg-primary' : ''
         }`}
         onClick={() => setOpen((prev) => !prev)}
+        aria-label="Open mobile navigation menu"
+        aria-describedby="open mobile navigation menu"
       >
         {open ? <X size={26} /> : <AlignRight size={26} />}
       </Button>

@@ -12,15 +12,15 @@ export default function Portfolio() {
 
   useEffect(() => {
     if (isInView) {
-      animate('h3', { x: 0, opacity: 1 }, { delay: 0, duration: 0.6 });
+      animate('h2', { x: 0, opacity: 1 }, { delay: 0, duration: 0.6 });
       animate(
-        'h4',
+        'h3',
         { scale: 1, opacity: 1 },
         { delay: stagger(0.3), duration: 0.6 }
       );
     } else {
       animate(
-        'h4',
+        'h3',
         { scale: 0, opacity: 0 },
         { delay: stagger(0.3), duration: 0.6 }
       );
@@ -30,12 +30,12 @@ export default function Portfolio() {
   return (
     <section className="p-2.5 container my-10" ref={scope} id="gallery">
       <div className="px-10 lg:px-40 py-10">
-        <motion.h3
+        <motion.h2
           className="font-medium text-3xl sm:text-4xl md:text-5xl sm:text-right text-center"
           initial={{ x: 30, opacity: 0 }}
         >
           Portfolio
-        </motion.h3>
+        </motion.h2>
       </div>
 
       <div
@@ -65,9 +65,9 @@ export default function Portfolio() {
                 </div>
                 <div className="absolute flex items-center justify-center inset-0">
                   <div className="bg-accent/60 hover:bg-accent/20 transition-all ease-out absolute inset-0 z-10"></div>
-                  <h4 className="text-3xl md:text-4xl relative z-50 capitalize">
+                  <h3 className="text-3xl md:text-4xl relative z-50 capitalize">
                     {name}
-                  </h4>
+                  </h3>
                 </div>
               </Link>
             </article>

@@ -16,12 +16,12 @@ export default function About() {
 
   return (
     <section className="py-5 container" ref={scope} id="about">
-      <motion.h3
+      <motion.h2
         className="font-medium text-3xl sm:text-4xl md:text-5xl max-sm:text-center px-10 lg:px-40 py-10 "
         initial={{ x: -100, opacity: 0 }}
       >
         About me
-      </motion.h3>
+      </motion.h2>
 
       <motion.p
         className="sm:w-4/5 mx-auto lg:px-40 text-lg "
