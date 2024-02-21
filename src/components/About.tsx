@@ -9,7 +9,7 @@ export default function About() {
 
   useEffect(() => {
     if (isInView) {
-      animate('h3', { x: 0, opacity: 1 }, { delay: 0.5, duration: 0.6 });
+      animate('h2', { x: 0, opacity: 1 }, { delay: 0.5, duration: 0.6 });
       animate('p', { y: 0, opacity: 1 }, { delay: 0.7, duration: 0.6 });
     }
   }, [animate, isInView, scope]);
