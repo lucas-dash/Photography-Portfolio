@@ -1,4 +1,4 @@
-import useCounter from '@/hooks/useCounter';
+import useCounter from '@/Hooks/useCounter';
 import { Button } from './ui/button';
 import { Link } from 'react-scroll';
 
