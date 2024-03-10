@@ -6,11 +6,12 @@ const workSans = Work_Sans({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: {
-    default: 'Lucie Homolkova Portfolio',
+    default: 'Lucie Homolková Portfolio',
     template: '%s - Lucie Homolkova Portfolio',
   },
   description: 'Horsham photoshooting',
   keywords: ['Photo', 'Photoshooting'],
+  creator: 'Lucas Homolka',
 };
 
 export default function RootLayout({

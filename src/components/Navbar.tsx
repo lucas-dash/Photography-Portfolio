@@ -48,16 +48,16 @@ export default function Navbar() {
         </li>
         <li className='relative cursor-pointer transition-all duration-500 before:content-[""] before:absolute before:-bottom-1 before:left-0 before:w-0 before:h-1 before:rounded-full before:opacity-0 before:transition-all before:duration-500 before:bg-accent hover:before:w-full hover:before:opacity-100'>
           <Link
-            to="gallery"
+            to="portfolio"
             spy={true}
             offset={-20}
             smooth={true}
             duration={600}
             className="cursor-pointer text-lg"
             role="button"
-            aria-describedby="scroll to gallery section"
+            aria-describedby="scroll to portfolio section"
           >
-            Gallery
+            Portfolio
           </Link>
         </li>
       </ul>

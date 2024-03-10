@@ -16,7 +16,7 @@ export const galleryImageCovers = [
   },
   {
     id: 3,
-    name: 'moments',
+    name: 'maternity',
     cover: '/moments.webp',
   },
 ];

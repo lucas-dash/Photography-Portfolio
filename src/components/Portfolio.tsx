@@ -28,7 +28,7 @@ export default function Portfolio() {
   }, [animate, isInView, scope]);
 
   return (
-    <section className="p-2.5 container my-10" ref={scope} id="gallery">
+    <section className="p-2.5 container my-10" ref={scope} id="portfolio">
       <div className="px-10 lg:px-40 py-10">
         <motion.h2
           className="font-medium text-3xl sm:text-4xl md:text-5xl sm:text-right text-center"
@@ -50,7 +50,7 @@ export default function Portfolio() {
               <Link
                 href={`/${name}`}
                 aria-label={`Link to ${name} gallery`}
-                aria-describedby={`Check all ${name} gallery photos`}
+                aria-describedby={`Check all ${name} portfolio photos`}
                 className="absolute inset-0 group"
               >
                 <div className="relative h-full w-full ">

@@ -5,12 +5,12 @@ import cloudinary from 'cloudinary';
 import { CloudinaryResponseType } from '@/Types/cloudinary';
 
 export const metadata: Metadata = {
-  title: 'Moments Gallery',
-  description: 'Moments photoshooting',
-  keywords: ['Moments Gallery', 'Photoshooting'],
+  title: 'Maternity Gallery',
+  description: 'Maternity photoshooting',
+  keywords: ['Maternity Gallery', 'Photoshooting'],
 };
 
-export default async function Moments() {
+export default async function Maternity() {
   const results = (await cloudinary.v2.search
     .expression('folder:Moments AND resource_type:image')
     .max_results(10)
@@ -18,8 +18,8 @@ export default async function Moments() {
 
   return (
     <main className="container">
-      <SectionHeader title="Moments Gallery" />
-      <Gallery result={results.resources} alt="Moments Images" />
+      <SectionHeader title="Maternity Gallery" />
+      <Gallery result={results.resources} alt="Maternity Image" />
     </main>
   );
 }
