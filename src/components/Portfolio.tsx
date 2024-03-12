@@ -64,8 +64,8 @@ export default function Portfolio() {
                   />
                 </div>
                 <div className="absolute flex items-center justify-center inset-0">
-                  <div className="bg-accent/60 hover:bg-accent/20 transition-all ease-out absolute inset-0 z-10"></div>
-                  <h3 className="text-3xl md:text-4xl font-medium relative z-50 capitalize">
+                  <div className="bg-accent/60 group-hover:bg-accent/20 transition-all ease-out absolute inset-0 z-10"></div>
+                  <h3 className="text-3xl md:text-4xl font-medium relative z-50 capitalize ">
                     {name}
                   </h3>
                 </div>
