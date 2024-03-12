@@ -155,17 +155,17 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    to="gallery"
+                    to="portfolio"
                     spy={true}
                     offset={-20}
                     smooth={true}
                     duration={600}
-                    aria-describedby="scroll to gallery section"
+                    aria-describedby="scroll to portfolio section"
                     onClick={() => setOpen(false)}
                     className="text-5xl font-medium font-secondary text-text-light hover:text-detail transition-all cursor-pointer"
                     role="button"
                   >
-                    Gallery
+                    Portfolio
                   </Link>
                 </li>
                 <li>
