@@ -10,7 +10,7 @@ export default async function Showcase() {
 
   return (
     <section
-      className="min-h-screen columns-2 lg:columns-4 p-1 sm:p-2 -mb-5 space-y-4"
+      className="min-h-screen columns-2 lg:columns-4 p-4 -mb-5 space-y-4"
       id="showcase"
     >
       {results.resources.map((data) => {

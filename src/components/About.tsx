@@ -1,5 +1,6 @@
 'use client';
 
+import { calculateAge } from '@/lib/utils';
 import { useInView, motion, useAnimate } from 'framer-motion';
 import { useEffect } from 'react';
 
@@ -27,10 +28,10 @@ export default function About() {
         className="sm:w-4/5 mx-auto lg:px-40 text-lg "
         initial={{ opacity: 0, y: 50 }}
       >
-        Hi, my name is Lucie and I&apos;m 32 years old. I am currently based in
-        West Sussex near Horsham but I am also a lot in Surrey around Cranleigh.
-        I love photographing and capturing the moments of people&apos;s life -
-        especially kids, newborns and family portraits.
+        Hi, my name is Lucie and I&apos;m {calculateAge()} years old. I am
+        currently based in West Sussex near Horsham but I am also a lot in
+        Surrey around Cranleigh. I love photographing and capturing the moments
+        of people&apos;s life - especially kids, newborns and family portraits.
         <br />
         <br />I prefer to take pictures outside with the natural light but of
         course for the newborns and family portraits I am very happy to come to
