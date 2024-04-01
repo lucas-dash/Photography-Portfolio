@@ -17,7 +17,7 @@ export default function Hero() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          Beautiful Moments Is Everything
+          Beautiful Moments Are Everything
         </motion.h1>
 
         <section className="flex items-center justify-center relative">
