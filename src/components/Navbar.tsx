@@ -24,10 +24,10 @@ export default function Navbar() {
     >
       <div className="flex items-center justify-center">
         <Image
-          src={'/logo.svg'}
+          src={'/photo-logo.webp'}
           alt="Lucie Homolková Photography Logo"
-          width={44}
-          height={44}
+          width={60}
+          height={60}
         />
       </div>
 

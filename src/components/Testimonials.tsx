@@ -24,6 +24,7 @@ export default function Testimonials() {
       <Button
         variant={'ghost'}
         className="border border-secondary rounded-xl hover:bg-secondary hover:text-text-light"
+        asChild
       >
         <Link
           to="showcase"
